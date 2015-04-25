@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+              http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5"
+         xmlns="http://java.sun.com/xml/ns/javaee">
+
+  <!-- Servlets -->
+  
+   <servlet>
+  <servlet-name>mmlink2</servlet-name>
+  <servlet-class>ab.mmlink2</servlet-class>
+
+</servlet>  
+  <servlet-mapping>
+  <servlet-name>mmlink2</servlet-name>
+  <url-pattern>/mmlink2</url-pattern>
+</servlet-mapping>
+
+   
+   
+   <servlet>
+  <servlet-name>abc</servlet-name>
+  <servlet-class>ab.abc</servlet-class>
+  <load-on-startup>1</load-on-startup>
+</servlet>  
+  <servlet-mapping>
+  <servlet-name>abc</servlet-name>
+  <url-pattern>/abc</url-pattern>
+</servlet-mapping>
+
+   
+   
+   
+	<servlet>
+		<servlet-name>sse</servlet-name>
+		<servlet-class>kb.server.SSEAsyncServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>sse</servlet-name>
+		<url-pattern>/sse</url-pattern>
+	</servlet-mapping>
+
+  
+  
+  
+  <servlet>
+    <servlet-name>greetServlet</servlet-name>
+    <servlet-class>kb.server.GreetingServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>greetServlet</servlet-name>
+    <url-pattern>/kb/greet</url-pattern>
+  </servlet-mapping>
+  
+    
+  <servlet>
+    <servlet-name>sss</servlet-name>
+    <servlet-class>kb.server.ServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>sss</servlet-name>
+    <url-pattern>/kb/sss</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Default page to serve -->
+  <welcome-file-list>
+    <welcome-file>Kb.html</welcome-file>
+  </welcome-file-list>
+
+</web-app>
